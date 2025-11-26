@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="utf-8" />
@@ -10,6 +10,12 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="세종대학교-스텔스 정보 수집 및 가시화" />
   <title>세종대학교-스텔스 정보 수집 및 가시화</title>
+  
+  <!-- Security Headers via meta tags -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: wss: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://cdn.jsdelivr.net https://cesium.com; style-src 'self' 'unsafe-inline' https://cesium.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; connect-src 'self' https: wss:; frame-ancestors 'self';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
   
   <!-- GitHub Pages SPA redirect script -->
   <script>
@@ -22,13 +28,13 @@
     })();
   </script>
   
-  <!-- Preload font for better performance -->
+  <!-- Preload critical font for better LCP -->
   <link rel="preload" href="/Font/NanumSquareB.otf" as="font" type="font/otf" crossorigin>
   
-  <!-- Preconnect to external domains for faster loading -->
+  <!-- Preconnect only to most critical origin, dns-prefetch for others -->
   <link rel="preconnect" href="https://cesium.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preconnect" href="https://maps.googleapis.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://maps.googleapis.com">
   
   <!-- Load CSS asynchronously to avoid render blocking -->
   <link href="https://cesium.com/downloads/cesiumjs/releases/1.112/Build/Cesium/Widgets/widgets.css" 
@@ -44,12 +50,12 @@
   <script async
     src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=geometry,places">
   </script>
-  <script type="module" crossorigin src="/assets/js/index-CG8dVMIY.js"></script>
+  <script type="module" crossorigin src="/assets/js/index-DPpeg9x1.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/js/react-vendor-ClEFeRSO.js">
   <link rel="modulepreload" crossorigin href="/assets/js/mui-vendor-BDHQmYi7.js">
   <link rel="modulepreload" crossorigin href="/assets/js/chart-vendor-CeJ1_NXY.js">
   <link rel="modulepreload" crossorigin href="/assets/js/three-vendor-CtB2SH65.js">
-  <link rel="stylesheet" crossorigin href="/assets/css/index-vnMvSBSu.css">
+  <link rel="stylesheet" crossorigin href="/assets/css/index-CqZlSz9Z.css">
 </head>
 
 <body>
@@ -64,8 +70,7 @@
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-
+    -->
 </body>
 
 </html>
